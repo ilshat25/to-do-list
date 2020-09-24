@@ -1,16 +1,12 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>To do list</title>
-</head>
-<body>
-    <div id="content">
-        <section id="section-title">
+{% block title %}
+    To do list
+{% endblock title %}
+
+{% block content %}
+    <section id="section-title">
             <h1 id="title">To-do list</h1>
         </section>
 
@@ -44,12 +40,12 @@
                 </ul>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <p>Made by Ilshat G.</p>
-    </footer>
+        <section id="section-relogin">
+            <a href="{% url 'login' %}" class="link-relogin">Change account</a>
+        </section>
+{% endblock content %}
 
+{% block scripts %}
     <script src="{% static 'js/app.js' %}"></script>
-</body>
-</html>
+{% endblock scripts %}

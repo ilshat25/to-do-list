@@ -137,3 +137,8 @@ button[type="submit"]:focus {
 .btn-remove {
     background-color: var(--clr-red);
 }
+
+.link-relogin {
+    color: grey;
+    text-decoration: none;
+}

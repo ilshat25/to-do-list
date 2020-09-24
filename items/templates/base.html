@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <p>Made by Ilshat G.</p>
+    </footer>
+
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>

@@ -26,7 +26,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'items',
+    'accounts',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.vk',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +66,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'toDoList.wsgi.application'
 
+SITE_ID = 1
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -88,3 +97,9 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+# Allauth related settings
+
+LOGIN_REDIRECT_URL = '/items/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/items/'
+
