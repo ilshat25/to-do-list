@@ -1,5 +1,6 @@
 db.sqlite3
 
 venv/
+.vscode/
 *__pycache__/
 *__migrations__/
