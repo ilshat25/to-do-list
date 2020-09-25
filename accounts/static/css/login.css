@@ -1,0 +1,34 @@
+:root {
+    --clr-google: #dd4b39;
+    --clr-vk: #4c75a3;
+}
+
+#section-login {
+    max-width: 400px;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+}
+
+.list-socials {
+    list-style: none;
+}
+
+.list-social {
+    margin: 1em;
+}
+
+.btn-social {
+    display: block;
+    color: white;
+}
+
+.btn-google {
+    background-color: var(--clr-google);
+}
+
+.btn-vk {
+    background-color: var(--clr-vk);
+}

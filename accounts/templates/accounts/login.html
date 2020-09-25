@@ -1,13 +1,22 @@
 {% extends 'base.html' %}
 {% load socialaccount %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+{% endblock links %}
 
 {% block title %}
     Login
 {% endblock title %}
 
 {% block content %}
-    <a href="{% provider_login_url 'google' process='login' %}" class="btn google-btn">Login with Google</a>
-    <a href="{% provider_login_url 'vk' process='login' %}" class="btn vk-btn">Login with VK</a>
+    <section id="section-login">
+        <ul class="list-socials">
+            <li class="list-social"><a href="{% provider_login_url 'google' process='login' %}" class="btn btn-social btn-google">Login with Google</a></li>
+            <li class="list-social"><a href="{% provider_login_url 'vk' process='login' %}" class="btn btn-social btn-vk">Login with VK</a></li>
+        </ul>
+    </section>
 {% endblock content %}
 
 
