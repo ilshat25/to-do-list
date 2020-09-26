@@ -1,0 +1,10 @@
+<ul class="list-items">
+    {% for item in items %}
+        <li class="list-item">
+            <p>{{ item.item }}</p>
+            <div class="item-controler">
+                <a href="#" data-pk="{{ item.pk }}" class="btn btn-done">Done</a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

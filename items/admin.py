@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import ItemModel
+
+
+@admin.register(ItemModel)
+class ItemAdmin(admin.ModelAdmin):
+    fields = ('item', 'owner',)
+    list_display = ('item', 'owner',)
