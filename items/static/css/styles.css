@@ -15,6 +15,7 @@
 
     --radius: 1em;
     --shadow: 2px 2px 15px var(--clr-text-primary);
+    --animation-time: 0.4s;
 }
 
 * {
@@ -113,6 +114,15 @@ button[type="submit"]:focus {
     border-bottom: 1px solid var(--clr-primary);
 }
 
+.list-item.added {
+    animation: slide-up var(--animation-time) ease;
+}
+
+.list-item.removed {
+    animation: slide-up var(--animation-time) ease;
+    animation-direction: reverse;
+}
+
 .list-item:last-child {
     border: none;
 }
@@ -140,4 +150,15 @@ button[type="submit"]:focus {
 .link-relogin {
     color: grey;
     text-decoration: none;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
