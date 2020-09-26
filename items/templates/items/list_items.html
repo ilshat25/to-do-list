@@ -1,9 +1,9 @@
 <ul class="list-items">
     {% for item in items %}
-        <li class="list-item">
+        <li class="list-item" data-pk="{{ item.pk }}">
             <p>{{ item.item }}</p>
             <div class="item-controler">
-                <a href="#" data-pk="{{ item.pk }}" class="btn btn-done">Done</a>
+                <a href="#" class="btn btn-done" data-pk="{{ item.pk }}">Done</a>
             </div>
         </li>
     {% endfor %}

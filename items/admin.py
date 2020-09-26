@@ -5,5 +5,5 @@ from .models import ItemModel
 
 @admin.register(ItemModel)
 class ItemAdmin(admin.ModelAdmin):
-    fields = ('item', 'owner',)
+    fields = ('item', 'owner', 'order',)
     list_display = ('item', 'owner',)

@@ -20,6 +20,7 @@
         <section id="section-items">
             <div class="box">
                 {% include 'items/list_items.html' with items=items %}
+                <h2 id="no-items" class="{% if items %}hide{% endif %}">Nothing to do</h2>
             </div>
         </section>
 
