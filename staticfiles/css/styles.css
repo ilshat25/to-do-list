@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --clr-primary: #e8f9fd;
+    --clr-secondary: white;
+
+    --clr-red: rgb(235, 132, 127);
+    --clr-green: #B2F77D;
+    
+    --clr-text-primary: black;
+    --clr-text-secondary: rgb(32, 32, 32);
+    
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Ubuntu', sans-serif;
+
+    --radius: 1em;
+    --shadow: 2px 2px 15px var(--clr-text-primary);
+    --animation-time: 0.4s;
+}
+
+* {
+    font-family: var(--ff-primary);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+body,
+html {
+    height: 100%;
+    color: var(--clr-text-primary);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--clr-primary);
+    transition: all 0.4 ease;
+}
+
+li,
+p,
+button,
+input {
+    font-family: var(--ff-secondary);
+    color: var(--clr-text-secondary);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+footer {
+    flex-shrink: 0;
+    margin: 2em auto;
+}
+
+#content {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    max-width: 600px;
+    margin: 4em auto;
+}
+
+#section-form {
+    max-width: 400px;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 0.5em 0.8em;
+    background-color: var(--clr-secondary);
+    width: 80%;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button[type="submit"] {
+    border: none;
+    padding: 0.5em 0.8em;
+    width: 20%;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+.box {
+    background: var(--clr-secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1em;
+}
+
+.list-items {
+    list-style: none;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em 0;
+    border-bottom: 1px solid var(--clr-primary);
+}
+
+.list-item:last-child {
+    border:none;
+}
+
+.ui-sortable-placeholder {
+    border: 1px solid black;
+    background: green;
+}
+
+.list-item.added {
+    animation: slide-up var(--animation-time) ease;
+}
+
+.list-item.removed {
+    animation: slide-up var(--animation-time) ease;
+    animation-direction: reverse;
+}
+
+.list-controler {
+    padding-top: 1em;
+}
+
+.btn {
+    color: var(--clr-text-primary);
+    background: var(--clr-primary);
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    border-radius: var(--radius);
+}
+
+.btn-done {
+    background-color: var(--clr-green);
+}
+
+.btn-remove {
+    background-color: var(--clr-red);
+}
+
+.link-relogin {
+    color: grey;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
