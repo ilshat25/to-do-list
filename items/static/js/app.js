@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function(){
         $.ajax({
             type: 'POST',
             url: `/items/done/${pk}/`,
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
             data: {pk: pk},
             success: function(response) {
                 if (response.status == 'ok'){
